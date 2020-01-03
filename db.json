@@ -1,0 +1,35 @@
+{
+  "Employees": [
+    {
+      "name": "Akram",
+      "designation": "UI",
+      "gender": "Male"
+    },
+    {
+      "name": "Venu",
+      "designation": "UI",
+      "gender": "Male"
+    },
+    {
+      "name": "Mahesh",
+      "designation": "UI",
+      "gender": "Male"
+    },
+    {
+      "name": "Suraj",
+      "designation": "UI",
+      "gender": "Male"
+    },
+    {
+      "name": "Aditya",
+      "designation": "UI",
+      "gender": "Male"
+    },
+    {
+      "name": "Prasanna",
+      "designation": "UI",
+      "gender": "Male"
+    }
+
+  ]
+}

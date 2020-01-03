@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>Friday Task</h2>  
+    <input type="text" class="form-control" [(ngModel)]="SearchText" placeholder="Search by name">            
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Designation</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of empname | search:SearchText" 
+        (click)="onClick(emp)">
+          <td>{{emp.name}}</td>
+          <td>{{emp.designation}}</td>
+          <td>{{emp.gender}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <h2 *ngIf="(empname | search:SearchText)?.length==0" style="color: blueviolet;">Not Found</h2>
+  </div>
+
+
+  <h1>USING NGX DATA TABLE</h1>
+  <ngx-datatable class="material" [rows]="empname" [columnMode]="'force'" 
+  *ngFor="let emp of empname"
+  (click)="onClick(emp)">
+  <ngx-datatable-column name="Name">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{emp.name}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Designation">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{emp.designation}}
+    </ng-template>
+  </ngx-datatable-column>
+  <ngx-datatable-column name="Gender">
+    <ng-template let-row="row" ngx-datatable-cell-template>
+      {{emp.gender}}
+    </ng-template>
+  </ngx-datatable-column>
+</ngx-datatable>
+
